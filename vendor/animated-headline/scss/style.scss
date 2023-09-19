@@ -753,3 +753,7 @@ xpush
 		@include transform(translateX(100%));
 	}
 }
+
+img[data-sticky-width="167"] {
+	margin-left: 20px;
+  }
