@@ -1169,6 +1169,9 @@ pre {
 #header .header-social-icons {
 	margin-left: 16px;
 	margin-left: 1rem;
+	display: inline-block;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #header .header-border-left {

@@ -52,6 +52,32 @@
 	<!-- Head Libs -->
 	<script src="vendor/modernizr/modernizr.min.js"></script>
 
+	<style>
+        .centered-title {
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+		.submenu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            margin: 0;
+            padding: 10px 0;
+			z-index: 1000;
+        }
+        
+        .submenu li {
+            padding: 10px 20px;
+        }
+        
+        .nav-item:hover .submenu {
+            display: block;
+        }
+    </style>
+
 </head>
 
 <body data-plugin-page-transition>
@@ -84,13 +110,17 @@
 											<a class="nav-link" href="contact-us.html"><i
 													class="fas fa-angle-right"></i>Destek</a>
 										</li>
-										<li class="nav-item nav-item-anim-icon d-none d-md-block">
-											<a class="nav-link" href="contact-us.html"><i
+										<li class="nav-item d-none d-md-block">
+											<a class="nav-link" href="https://www.youtube.com/@veboni3164/featured" target="_blank"><i
 													class="fas fa-angle-right"></i>Doküman Eğitim</a>
+													<ul class="submenu">
+														<li><a href="https://www.youtube.com/@veboni3164/featured" target="_blank">Eğitim Videoları</a></li>
+
+													</ul>
 										</li>
 										<li
 											class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
-											<span class="ws-nowrap"><i class="fas fa-phone"></i> (123) 456-789</span>
+											<span class="ws-nowrap"><i class="fas fa-phone"></i>0 850 777 0 111</span>
 										</li>
 									</ul>
 								</nav>
@@ -111,41 +141,7 @@
 											</form>
 										</div>
 									</div>
-									<div class="header-nav-feature header-nav-features-cart d-inline-flex ms-2">
-										<a href="#" class="header-nav-features-toggle" aria-label="">
-											<img src="img/icons/icon-cart.svg" width="14" alt=""
-												class="header-nav-top-icon-img">
-											<span class="cart-info d-none">
-												<span class="cart-qty">1</span>
-											</span>
-										</a>
-										<div class="header-nav-features-dropdown" id="headerTopCartDropdown">
-											<ol class="mini-products-list">
-												<li class="item">
-													<a href="#" title="Camera X1000" class="product-image"><img
-															src="img/products/product-1.jpg" alt="Camera X1000"></a>
-													<div class="product-details">
-														<p class="product-name">
-															<a href="#">Camera X1000 </a>
-														</p>
-														<p class="qty-price">
-															1X <span class="price">$890</span>
-														</p>
-														<a href="#" title="Remove This Item" class="btn-remove"><i
-																class="fas fa-times"></i></a>
-													</div>
-												</li>
-											</ol>
-											<div class="totals">
-												<span class="label">Total:</span>
-												<span class="price-total"><span class="price">$890</span></span>
-											</div>
-											<div class="actions">
-												<a class="btn btn-dark" href="#">View Cart</a>
-												<a class="btn btn-primary" href="#">Checkout</a>
-											</div>
-										</div>
-									</div>
+									
 								</div>
 							</div>
 							<div class="header-row">
@@ -388,8 +384,39 @@
 														Doküman ve Süreç Yönetimi
 													</a>
 													<ul class="dropdown-menu">
-														<li><a class="dropdown-item">BPM</a></li>
-
+														
+															<span class="centered-title">BPM</span>
+															
+																<li><a class="dropdown-item">Üretim</a>
+																</li>
+																<li><a class="dropdown-item">Belge Onayı</a>
+																</li>
+																<li><a class="dropdown-item">Satış Takibi</a>
+																</li>
+																<li><a class="dropdown-item">Planlama Takibi</a>
+																</li>
+																<li><a class="dropdown-item">Entegrasyonlar</a>
+																</li>
+																<li><a class="dropdown-item">Bildirim Sistemi</a>
+																</li>
+															
+														
+														
+															<span class="centered-title">DMS</span>
+															
+																<li><a class="dropdown-item">Dijital Arşiv</a></li>
+																<li><a class="dropdown-item">Doküman Sınıflandırma</a>
+																</li>
+																<li><a class="dropdown-item">Kurumsal İçerik Kontrolü</a>
+																</li>
+																<li><a class="dropdown-item">Muhasebe</a>
+																</li>
+																<li><a class="dropdown-item">Finans</a>
+																</li>
+																<li><a class="dropdown-item">Stok Cost</a>
+																</li>
+																<li><a class="dropdown-item">Bütçe</a>
+																</li>
 													</ul>
 												</li>
 												<li class="dropdown">
@@ -399,10 +426,10 @@
 													<ul class="dropdown-menu">
 														<li><a class="dropdown-item"
 																href="https://adminbeta.veboni.com/">Veboni ERP</a></li>
-														<li><a class="dropdown-item">Sedna Klasik</a></li>
+														<li><a class="dropdown-item">Sedna</a></li>
 														<li><a class="dropdown-item">Sedna Cloud</a></li>
-														<li><a class="dropdown-item">Asya Soft</a></li>
-														<li><a class="dropdown-item">Compass</a></li>
+														<li><a class="dropdown-item">Asyasoft</a></li>
+														<li><a class="dropdown-item">Asyasoft Compass</a></li>
 													</ul>
 												</li>
 												<!-- <li class="dropdown">
@@ -456,15 +483,17 @@
 										</nav>
 									</div>
 									<ul class="header-social-icons social-icons d-none d-sm-block">
-										<li class="social-icons-facebook"><a
-												href="https://www.facebook.com/kodsednacloud/" target="_blank"
-												title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-										<li class="social-icons-twitter"><a href="https://twitter.com/kodsedna"
-												target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+										<li class="social-icons-youtube"><a
+											href="https://www.youtube.com/@kodyazlm8418"
+											target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a>
+									</li>
+										<li class="social-icons-facebook"><a href="https://www.facebook.com/kodsednacloud/"
+												target="_blank" title="Twitter"><i class="fab fa-facebook-f"></i></a></li>
 										<li class="social-icons-linkedin"><a
 												href="https://www.linkedin.com/company/kod-yaz%C4%B1l%C4%B1m-ve-proje-hizmetleri/?originalSubdomain=tr/"
 												target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
 										</li>
+										
 									</ul>
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse"
 										data-bs-target=".header-nav-main nav">
@@ -635,16 +664,14 @@
 					<div class="row align-items-center">
 						<div class="col-lg-8">
 							<p>
-								The fastest way to grow your business with the leader in <span
-									class="highlighted-word">Technology</span>
-								<span>Check out our options and features included.</span>
+								Uçtan uca otel yönetim yazılımı sistemlerinin sağlayıcısı Veboni ERP, bulut tabanlı kullanım sunar. Uygulama için, bir tarayıcıdan ve geniş bantlı bir internet bağlantısından başka bir şey gerekmemektedir. 
+								<span> şimdi incele.</span>
 							</p>
 						</div>
 						<div class="col-lg-4">
 							<div class="get-started text-start text-lg-end">
-								<a href="#" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get
-									Started Now</a>
-								<div class="learn-more">or <a href="index.html">learn more.</a></div>
+								<a href="https://adminbeta.veboni.com/" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Kullan</a>
+								<div class="learn-more">veya <a href="index.html">Öğrenmeye başla.</a></div>
 							</div>
 						</div>
 					</div>
@@ -658,25 +685,23 @@
 					<div class="col-md-10 mx-md-auto">
 						<h1 class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation"
 							data-appear-animation="fadeInUpShorter">
-							<span>Porto is </span>
+							<span>Veboni ERP baştan sona tüm süreçleriniz için çözüm sunar. </span>
 							<span class="word-rotator-words bg-dark">
-								<b class="is-visible">incredibly</b>
-								<b>especially</b>
-								<b>extremely</b>
+								<b class="is-visible">Otellerden acentelere</b>
+								<b>tedarikçilerden personele</b>
 							</span>
-							<span> beautiful and fully responsive.</span>
+							<span> turizm sektöründe her alanda çözümler sunan tam entegre turizm ekosistemidir</span>
 						</h1>
-						<p class="lead appear-animation" data-appear-animation="fadeInUpShorter"
+						<!-- <p class="lead appear-animation" data-appear-animation="fadeInUpShorter"
 							data-appear-animation-delay="300">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel
 							pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris lacus sed leo.
-						</p>
+						</p> -->
 					</div>
 				</div>
-
 			</div>
 
-			<div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+			<!-- <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
 				<div class="home-concept mt-5">
 					<div class="container">
 
@@ -723,7 +748,7 @@
 
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="container mb-5 pb-4">
 
@@ -744,9 +769,8 @@
 										<i class="icons icon-support text-color-primary"></i>
 									</div>
 									<div class="feature-box-info">
-										<h4 class="font-weight-bold text-4-5 mb-1">Customer Support</h4>
-										<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Phasellus blandit massa</p>
+										<h4 class="font-weight-bold text-4-5 mb-1">%100 Cloud</h4>
+										<p class="mb-4">Server kiralama, barındırma ve işletim sistemi lisanlama gibi maliyetleri ortadan kaldırır. Veri tabanlarını yurt içindeki sunucularda barındırır.</p>
 									</div>
 								</div>
 								<div class="feature-box feature-box-style-2">
@@ -754,9 +778,10 @@
 										<i class="icons icon-doc text-color-primary"></i>
 									</div>
 									<div class="feature-box-info">
-										<h4 class="font-weight-bold text-4-5 mb-1">HTML5 / CSS3 / JS</h4>
-										<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Phasellus blandit massa</p>
+										<h4 class="font-weight-bold text-4-5 mb-1">Bağımsız Platform</h4>
+										<p class="mb-4">Kullanıcıları kurulum ve indirme gibi ihtiyaçları gerektirmeden bilgisayar, tablet ya da telefondan sisteme yetkileri doğrultusunda
+											istediği an ve dilediği noktadan hızlı erişmesini sağlar.
+										</p>
 									</div>
 								</div>
 								<div class="feature-box feature-box-style-2">
@@ -764,7 +789,7 @@
 										<i class="icons icon-social-google text-color-primary"></i>
 									</div>
 									<div class="feature-box-info">
-										<h4 class="font-weight-bold text-4-5 mb-1">500+ Google Fonts</h4>
+										<h4 class="font-weight-bold text-4-5 mb-1">Responsive Cloud ERP</h4>
 										<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 											Phasellus blandit massa</p>
 									</div>
@@ -774,9 +799,8 @@
 										<i class="icons icon-pencil text-color-primary"></i>
 									</div>
 									<div class="feature-box-info">
-										<h4 class="font-weight-bold text-4-5 mb-1">Colors</h4>
-										<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Phasellus blandit massa</p>
+										<h4 class="font-weight-bold text-4-5 mb-1">Esnek Framework</h4>
+										<p class="mb-4">Esnek framework yapısı ile hızlıca uyarlama ve geliştirme yapılmasına izin verir.</p>
 									</div>
 								</div>
 							</div>
@@ -786,9 +810,9 @@
 										<i class="icons icon-layers text-color-primary"></i>
 									</div>
 									<div class="feature-box-info">
-										<h4 class="font-weight-bold text-4-5 mb-1">Sliders</h4>
-										<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Phasellus blandit massa</p>
+										<h4 class="font-weight-bold text-4-5 mb-1">Özel Uyarlama</h4>
+										<p class="mb-4">Tesislerin özel ve sürekli gelişen sistemlerini aralıksız sürdürebilmeleri için özgürce form tasarlayıp 
+											hayata geçirebilmelerine olanak sağlar.</p>
 									</div>
 								</div>
 								<div class="feature-box feature-box-style-2">
@@ -796,9 +820,8 @@
 										<i class="icons icon-user text-color-primary"></i>
 									</div>
 									<div class="feature-box-info">
-										<h4 class="font-weight-bold text-4-5 mb-1">Icons</h4>
-										<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Phasellus blandit massa</p>
+										<h4 class="font-weight-bold text-4-5 mb-1">Kolay ve Hızlı Destek</h4>
+										<p class="mb-4">Bakım, geliştirme ve güncellemeleri buluttan, fiziksel müdahale gerektirmeden yaratır.</p>
 									</div>
 								</div>
 								<div class="feature-box feature-box-style-2">
@@ -806,9 +829,8 @@
 										<i class="icons icon-menu text-color-primary"></i>
 									</div>
 									<div class="feature-box-info">
-										<h4 class="font-weight-bold text-4-5 mb-1">Buttons</h4>
-										<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Phasellus blandit massa</p>
+										<h4 class="font-weight-bold text-4-5 mb-1">Anında Bildirimler</h4>
+										<p class="mb-4">Tanımlanabilir, push notification-mail-whatsapp-sms, gibi yöntemlerle bildirimleri yönetir</p>
 									</div>
 								</div>
 								<div class="feature-box feature-box-style-2">
@@ -888,7 +910,7 @@
 
 				<hr class="solid my-5">
 
-				<div class="row text-center pt-4">
+				<!-- <div class="row text-center pt-4">
 					<div class="col">
 						<h2 class="word-rotator slide font-weight-bold text-8 mb-2">
 							<span>We're not the only ones </span>
@@ -933,13 +955,13 @@
 					</div>
 				</div>
 
-			</div>
+			</div> -->
 
 			<section class="section section-custom-map appear-animation lazyload"
 				data-appear-animation="fadeInUpShorter" data-src-bg="img/map.png"
 				style="background-color: transparent; background-position: center 0; background-repeat: no-repeat;">
 				<section class="section section-default section-footer">
-					<div class="container">
+					<!-- <div class="container">
 						<div class="row mt-5 appear-animation" data-appear-animation="fadeInUpShorter">
 							<div class="col-lg-6">
 								<div class="recent-posts mb-5">
@@ -1143,7 +1165,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</section>
 			</section>
 		</div>
@@ -1203,28 +1225,31 @@
 					</div>
 					<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
 						<div class="contact-details">
-							<h5 class="text-3 mb-3">CONTACT US</h5>
+							<h5 class="text-3 mb-3">Ulaşın</h5>
 							<ul class="list list-icons list-icons-lg">
 								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
-									<p class="m-0">234 Street Name, City Name</p>
+									<p class="m-0">Akdeniz Üniversitesi Teknokent AR-GE 3 Binası No:758/1 Antalya/Türkiye</p>
+								</li>
+								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
+									<p class="m-0">Elmalı Mahallesi 8. Sokak Muratpaşa İşhanı No:2/102-103 Antalya/Türkiye</p>
 								</li>
 								<li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i>
-									<p class="m-0"><a href="tel:8001234567">(800) 123-4567</a></p>
+									<p class="m-0"><a href="tel:8001234567">0 850 777 0 111</a></p>
 								</li>
 								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i>
-									<p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p>
+									<p class="m-0"><a href="mailto:mail@example.com">info@veboni.com</a></p>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-2">
-						<h5 class="text-3 mb-3">FOLLOW US</h5>
+						<h5 class="text-3 mb-3">Sosyal Medya</h5>
 						<ul class="social-icons">
-							<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank"
+							<li class="social-icons-facebook"><a href="https://www.facebook.com/kodsednacloud/" target="_blank"
 									title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-							<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank"
-									title="Twitter"><i class="fab fa-twitter"></i></a></li>
-							<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank"
+							<li class="social-icons-youtube"><a href="https://www.youtube.com/@kodyazlm8418" target="_blank"
+									title="Youtube"><i class="fab fa-youtube"></i></a></li>
+							<li class="social-icons-linkedin"><a href="https://www.linkedin.com/company/kod-yaz%C4%B1l%C4%B1m-ve-proje-hizmetleri/?originalSubdomain=tr/" target="_blank"
 									title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
 						</ul>
 					</div>
