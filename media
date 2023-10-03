@@ -67,7 +67,7 @@
 							<div class="header-column px-lg-3">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="index"><img alt="Porto" width="150" height="70" data-sticky-width="82" data-sticky-height="40" data-sticky-top="0" src="img/veboni.svg"></a>
+										<a href="index.html"><img alt="Porto" width="150" height="70" data-sticky-width="82" data-sticky-height="40" data-sticky-top="0" src="img/veboni.svg"></a>
 									</div>
 								</div>
 							</div>
@@ -78,7 +78,7 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="index">
+														<a class="dropdown-item dropdown-toggle" href="index.html">
 															Kurumsal
 														</a>
 														<ul class="dropdown-menu">
