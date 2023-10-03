@@ -12,7 +12,9 @@ Primary style
 
 -------------------------------- */
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
 	@include box-sizing(border-box);
 }
 
@@ -30,6 +32,7 @@ body {
 		size: 1.6rem;
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
+
 	color: $color-1;
 	background-color: $color-3;
 }
@@ -114,7 +117,7 @@ a {
 
 	.no-js & b {
 		opacity: 0;
-		
+
 		&.is-visible {
 			opacity: 1;
 		}
@@ -129,7 +132,7 @@ xrotate-1
 -------------------------------- */
 
 .cd-headline.rotate-1 {
-	
+
 	.cd-words-wrapper {
 		@include perspective(300px);
 	}
@@ -201,7 +204,7 @@ xtype
 -------------------------------- */
 
 .cd-headline.type {
-	
+
 	.cd-words-wrapper {
 		vertical-align: top;
 		overflow: hidden;
@@ -219,7 +222,7 @@ xtype
 
 		&.waiting::after {
 			@include animation(cd-pulse 1s infinite);
-		} 
+		}
 
 		&.selected {
 			background-color: $color-1;
@@ -282,7 +285,8 @@ xrotate-2
 		@include perspective(300px);
 	}
 
-	i, em {
+	i,
+	em {
 		display: inline-block;
 		@include backface-visibility(hidden);
 	}
@@ -756,4 +760,8 @@ xpush
 
 img[data-sticky-width="167"] {
 	margin-left: 20px;
-  }
+}
+
+.custom-width {
+	width: 50% !important;
+}
