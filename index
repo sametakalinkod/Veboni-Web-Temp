@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>About Us | Porto - Multipurpose Website Template</title>	
+
+		<meta name="keywords" content="WebSite Template" />
+		<meta name="description" content="Porto - Multipurpose Website Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
+		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/theme.css">
+		<link rel="stylesheet" href="css/theme-elements.css">
+		<link rel="stylesheet" href="css/theme-blog.css">
+		<link rel="stylesheet" href="css/theme-shop.css">
+
+		<!-- Skin CSS -->
+		<link id="skinCSS" rel="stylesheet" href="css/skins/default.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Head Libs -->
+		<script src="vendor/modernizr/modernizr.min.js"></script>
+
+	</head>
+	<body data-plugin-page-transition>
+
+		<div class="body">
+			<header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickyChangeLogo': false, 'stickyHeaderContainerHeight': 70}">
+				<div class="header-body border-top-0 bg-dark box-shadow-none">
+					<div class="header-container container-fluid">
+						<div class="header-row p-relative px-0">
+							<div class="header-column px-lg-3">
+								<div class="header-row">
+									<div class="header-logo">
+										<a href="index"><img alt="Porto" width="150" height="70" data-sticky-width="82" data-sticky-height="40" data-sticky-top="0" src="img/veboni.svg"></a>
+									</div>
+								</div>
+							</div>
+							<div class="header-column w-100 ms-2 ms-xl-5 ps-2 pe-lg-3">
+								<div class="header-row justify-content-end justify-content-lg-start">
+									<div class="header-nav header-nav-links header-nav-light-text justify-content-lg-start">
+										<div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-mobile-dark header-nav-main-dropdown-border-radius header-nav-main-text-capitalize header-nav-main-text-size-5 header-nav-main-arrows header-nav-main-effect-1 header-nav-main-sub-effect-1">
+											<nav class="collapse">
+												<ul class="nav nav-pills" id="mainNav">
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="index">
+															Kurumsal
+														</a>
+														<ul class="dropdown-menu">
+															<li>
+																<a class="dropdown-item" href="about-us">
+																	Biz Kimiz?
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="media">
+																	Medya ve Etkinlikler
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="#">Ekibimiz</a>
+															</li>
+														</ul>
+													</li>
+													<li class="dropdown dropdown-mega">
+														<a class="dropdown-item dropdown-toggle">
+															Konaklama
+														</a>
+														<ul class="dropdown-menu">
+															<li>
+																<div class="dropdown-mega-content">
+																	<div class="row">
+																		<div class="col-lg-3">
+																			<!-- <span class="dropdown-mega-sub-title" href="property-management-system.html">PMS</span> -->
+																			<ul class="dropdown-mega-sub-nav">
+																				<li><a class="dropdown-item" href="front-office-pms">Ön Büro PMS</a>
+																				</li>
+																				<li><a class="dropdown-item" href="pos">POS</a>
+																				</li>
+																				<li><a class="dropdown-item" href="operation-tracking">Operasyon Takip</a>
+																				</li>
+																				<li><a class="dropdown-item" href="e-tahsilat">E-Tahsilat</a>
+																				</li>
+																			</ul>
+																		</div>
+																		<div class="col-lg-3">
+																			<!-- <span
+																				class="dropdown-mega-sub-title">Yönetim</span> -->
+																			<ul class="dropdown-mega-sub-nav">
+																				<li><a class="dropdown-item">Kanal
+																						Yöneticisi</a></li>
+																				<li><a class="dropdown-item">Online
+																						Rezervasyon</a>
+																				</li>
+																				<li><a class="dropdown-item">Çağrı
+																						Merkezi</a>
+																				</li>
+																				<li><a class="dropdown-item">Muhasebe</a>
+																				</li>
+																				<li><a class="dropdown-item">Finans</a>
+																				</li>
+																				<li><a class="dropdown-item">Stok Cost</a>
+																				</li>
+																				<li><a class="dropdown-item">Bütçe</a>
+																				</li>
+																			</ul>
+																		</div>
+																		<div class="col-lg-3">
+																			<!-- <span
+																				class="dropdown-mega-sub-title">E-Dönüşüm</span> -->
+																			<ul class="dropdown-mega-sub-nav">
+																				<li><a
+																						class="dropdown-item">E-Fatura/E-Arşiv</a>
+																				</li>
+																				<li><a class="dropdown-item">E-İrsaliye</a>
+																				</li>
+																				<li><a class="dropdown-item">E-Adisyon</a>
+																				</li>
+																				<li><a class="dropdown-item">E-Defter</a>
+																				</li>
+	
+																			</ul>
+																		</div>
+																		<div class="col-lg-3">
+																			<!-- <span class="dropdown-mega-sub-title">B2B</span> -->
+																			<ul class="dropdown-mega-sub-nav">
+																				<li><a class="dropdown-item">Tedarikçi</a>
+																				</li>
+																				<li><a class="dropdown-item">Personel</a>
+																				</li>
+																				<li><a class="dropdown-item">Operatör</a>
+																				</li>
+	
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="#">
+															Incoming
+														</a>
+														<ul class="dropdown-menu">
+															<li>
+																<a class="dropdown-item">Kontrat</a>
+															</li>
+															<li>
+																<a class="dropdown-item">Rezervasyon</a>
+															</li>
+															<li>
+																<a class="dropdown-item">Fatura Kontrol</a>
+															</li>
+															<li>
+																<a class="dropdown-item">Transfer Operasyon</a>
+															</li>
+															<li>
+																<a class="dropdown-item">Tur Operasyon</a>
+															</li>
+															<li>
+																<a class="dropdown-item">Muhasebe</a>
+															</li>
+															<li>
+																<a class="dropdown-item">Finans</a>
+															</li>
+	
+															<li class="dropdown-submenu">
+																<a class="dropdown-item" href="#">E-Dönüşüm</a>
+																<ul class="dropdown-menu">
+																	<li><a class="dropdown-item">E-Fatura/E-Arşiv</a></li>
+																	<li><a class="dropdown-item">E-İrsaliye</a></li>
+																	<li><a class="dropdown-item">E-Adisyon</a></li>
+																	<li><a class="dropdown-item">E-Defter</a></li>
+	
+																</ul>
+															</li>
+															<li>
+																<a class="dropdown-item">Tour Sale</a>
+															</li>
+															<li>
+																<a class="dropdown-item">B2B</a>
+															</li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="#">
+															İnsan Kaynakları
+														</a>
+														<ul class="dropdown-menu">
+	
+															<li><a class="dropdown-item">Bordro</a></li>
+															<li><a class="dropdown-item">Sicil Takibi</a></li>
+															<li><a class="dropdown-item">PDKS</a></li>
+															<li><a class="dropdown-item">SGK Entegrasyon</a></li>
+															<li><a class="dropdown-item">Puantaj Takibi</a></li>
+															<li><a class="dropdown-item">Avans ve İzin Takibi</a></li>
+	
+	
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="#">
+															Doküman ve Süreç Yönetimi
+														</a>
+														<ul class="dropdown-menu">
+															
+																<span class="centered-title">BPM</span>
+																
+																	<li><a class="dropdown-item">Üretim</a>
+																	</li>
+																	<li><a class="dropdown-item">Belge Onayı</a>
+																	</li>
+																	<li><a class="dropdown-item">Satış Takibi</a>
+																	</li>
+																	<li><a class="dropdown-item">Planlama Takibi</a>
+																	</li>
+																	<li><a class="dropdown-item">Entegrasyonlar</a>
+																	</li>
+																	<li><a class="dropdown-item">Bildirim Sistemi</a>
+																	</li>
+																
+															
+															
+																<span class="centered-title">DMS</span>
+																
+																	<li><a class="dropdown-item">Dijital Arşiv</a></li>
+																	<li><a class="dropdown-item">Doküman Sınıflandırma</a>
+																	</li>
+																	<li><a class="dropdown-item">Kurumsal İçerik Kontrolü</a>
+																	</li>
+																	<li><a class="dropdown-item">Muhasebe</a>
+																	</li>
+																	<li><a class="dropdown-item">Finans</a>
+																	</li>
+																	<li><a class="dropdown-item">Stok Cost</a>
+																	</li>
+																	<li><a class="dropdown-item">Bütçe</a>
+																	</li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a class="dropdown-item dropdown-toggle" href="#">
+															Markalarımız
+														</a>
+														<ul class="dropdown-menu">
+															<li><a class="dropdown-item">Sedna Cloud</a></li>
+															<li><a class="dropdown-item">Asyasoft Compass</a></li>
+														</ul>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+									<div class="d-flex">
+										<div class="d-none d-xxl-flex custom-header-1-extra-links">
+											<ul class="nav me-3 mt-1 ">
+												<li class="nav-item">
+													<a class="nav-link text-color-light text-2 font-weight-semibold" target="_blank" href="">Destek</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link text-color-light text-2 font-weight-semibold" target="_blank" href="">Dokümantasyon</a>
+												</li>
+											</ul>
+
+											<a class="btn btn-primary font-weight-semibold text-3 py-3 border-radius p-relative bottom-1 custom-header-1-btn-1" href="https://adminbeta.veboni.com/" target="_blank"><span class="px-4 d-block ws-nowrap">Veboni Giriş</span></a>
+										</div>
+										<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav"><i class="fa fa-bars"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern mb-0 page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-07" style="background-image: url(img/Backgrounds/pat-whelen-Rxt252RzQlY-unsplash.jpg);">
+					<div class="container">
+						<div class="row mt-5">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="text-9 font-weight-bold">Veboni</h1>
+								<span class="sub-title">Tüm işletmenizi güçlendirecek sezgisel bir Bulut ERP sistemi</span>
+							</div>
+							<!-- <div class="col-md-12 align-self-center order-1">
+								<ul class="breadcrumb breadcrumb-light d-block text-center">
+									<li><a href="#">Home</a></li>
+									<li class="active">Pages</li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+				</section>
+				<div class="home-intro bg-primary" id="home-intro">
+					<div class="container">
+	
+						<div class="row align-items-center">
+							<div class="col-lg-8">
+								<p>
+									Sektördeki en yüksek müşteri memnuniyeti derecesine sahip operasyon yönetim sistemini edinin.<span></span>
+								</p>
+							</div>
+							<div class="col-lg-4">
+								<div class="get-started text-start text-lg-end">
+									<a href="https://adminbeta.veboni.com/" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Kullan</a>
+									<div class="learn-more">veya <a href="index.html">Öğrenmeye başla.</a></div>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+				<div class="container">
+					<div class="row pt-5">
+						<div class="col">
+
+							<div class="row text-center pb-5">
+								<div class="col-md-10 mx-md-auto">
+									<div class="overflow-hidden mb-3">
+										<h1 class="word-rotator slide font-weight-bold text-8 mb-0 appear-animation" data-appear-animation="fadeInUpShorter">
+											<span>Veboni ERP baştan sona tüm süreçleriniz için çözüm sunar.</span>
+											<span class="word-rotator-words bg-dark">
+												<b class="is-visible">Otellerden acentelere</b>
+												<b>tedarikçilerden personele</b>
+											</span>
+											<span>turizm sektöründe her alanda çözümler sunan tam entegre turizm ekosistemidir</span>
+										</h1>
+									</div>
+									<div class="overflow-hidden mb-3">
+										<img width="500" height="550" class="mb-0 mt-0" src="img/solutions/veboniDevices.png">
+									</div>
+								</div>
+							</div>
+							<div class="row pb-3">
+								<div class="col-lg-11">
+									<h2 class="font-weight-normal text-7"> <strong
+											class="font-weight-extra-bold">Özelliklerimiz</strong></h2>
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-support text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">%100 Cloud</h4>
+													<p class="mb-4">Server kiralama, barındırma ve işletim sistemi lisanlama gibi maliyetleri ortadan kaldırır. Veri tabanlarını yurt içindeki sunucularda barındırır.</p>
+												</div>
+											</div>
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-menu text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Uçtan Uca Çözümler</h4>
+													<p class="mb-4">Baştan sona tüm iş süreçleri için kesintisiz çözümler sunar</p>
+												</div>
+											</div>
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-social-google text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Responsive Cloud ERP</h4>
+													<p class="mb-4">Responsive tasarımı ile farklı cihaz boyutlarında ve farklı işletim sistemlerinde en uygun ekran tasarımı ile çalışması.</p>
+												</div>
+											</div>
+											
+										</div>
+										<div class="col-sm-4">
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-pencil text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Esnek Framework</h4>
+													<p class="mb-4">Esnek framework yapısı ile hızlıca uyarlama ve geliştirme yapılmasına izin verir.</p>
+												</div>
+											</div>
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-layers text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Özel Uyarlama</h4>
+													<p class="mb-4">Tesislerin özel ve sürekli gelişen sistemlerini aralıksız sürdürebilmeleri için özgürce form tasarlayıp 
+														hayata geçirebilmelerine olanak sağlar.</p>
+												</div>
+											</div>
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-user text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Kolay ve Hızlı Destek</h4>
+													<p class="mb-4">Bakım, geliştirme ve güncellemeleri buluttan, fiziksel müdahale gerektirmeden yaratır.</p>
+												</div>
+											</div>
+											
+										</div>
+										<div class="col-sm-4">
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-menu text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Anında Bildirimler</h4>
+													<p class="mb-4">Tanımlanabilir, push notification-mail-whatsapp-sms, gibi yöntemlerle bildirimleri yönetir</p>
+												</div>
+											</div>
+											
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-doc text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Bağımsız Platform</h4>
+													<p class="mb-4">Kullanıcıları kurulum ve indirme gibi ihtiyaçları gerektirmeden bilgisayar, tablet ya da telefondan sisteme yetkileri doğrultusunda
+														istediği an ve dilediği noktadan hızlı erişmesini sağlar.
+													</p>
+												</div>
+											</div>
+											<div class="feature-box feature-box-style-2">
+												<div class="feature-box-icon">
+													<i class="icons icon-menu text-color-primary"></i>
+												</div>
+												<div class="feature-box-info">
+													<h4 class="font-weight-bold text-4-5 mb-1">Sürdürülebilir ERP</h4>
+													<p class="mb-4">Baştan sona tüm iş süreçleri için kesintisiz çözümler sunar</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+			
+
+							
+
+						</div>
+					</div>
+
+				</div>
+
+				<section class="section section-primary border-0 mb-0 appear-animation" data-appear-animation="fadeIn" data-plugin-options="{'accY': -150}">
+					<div class="container">
+						<div class="row counters counters-sm pb-4 pt-4">
+							<div class="col-sm-6 col-lg-4 mb-5 mb-lg-0">
+								<div class="counter">
+									<i class="icons icon-layers text-color-light"></i>
+									<strong class="text-color-light font-weight-extra-bold" data-to="600" data-append="+">0</strong>
+									<label class="text-4 mt-1 text-color-light">Tesis</label>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4 mb-5 mb-lg-0">
+								<div class="counter">
+									<i class="icons icon-badge text-color-light"></i>
+									<strong class="text-color-light font-weight-extra-bold" data-to="30" data-append="+">0</strong>
+									<label class="text-4 mt-1 text-color-light">Yıllık Tecrübe</label>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-4">
+								<div class="counter">
+									<i class="icons icon-user text-color-light"></i>
+									<strong class="text-color-light font-weight-extra-bold" data-to="100" data-append="+">0</strong>
+									<label class="text-4 mt-1 text-color-light">Personel</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				
+
+				
+
+				
+
+			</div>
+
+			<footer id="footer">
+				<div class="container">
+					<div class="footer-ribbon">
+						<span>Daha fazla bilgi</span>
+					</div>
+					<div class="row py-5 my-4">
+						<div class="col-md-6 col-lg-6 mb-4 mb-lg-0">
+							<h5 class="text-3 mb-3">HABER BÜLTENİ</h5>
+							<p class="pe-1">Sürekli gelişen ürün özelliklerimizden ve teknolojimizden haberdar olun. E-posta adresinizi girin ve bültenimize abone olun.</p>
+							<div class="alert alert-success d-none" id="newsletterSuccess">
+								<strong>Success!</strong> You've been added to our email list.
+							</div>
+							<div class="alert alert-danger d-none" id="newsletterError"></div>
+							<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST"
+								class="me-4 mb-3 mb-md-0">
+								<div class="input-group input-group-rounded">
+									<input class="form-control form-control-sm bg-light" placeholder="Email Address"
+										name="newsletterEmail" id="newsletterEmail" type="email">
+									<button class="btn btn-light text-color-dark"
+										type="submit"><strong>GO!</strong></button>
+								</div>
+							</form>
+						</div>
+						<!-- <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+							<h5 class="text-3 mb-3">LATEST POSTS</h5>
+							<ul class="list-unstyled mb-0">
+								<li class="mb-2 pb-1">
+									<a href="#">
+										<p class="text-3 text-color-light opacity-8 mb-0"><i
+												class="fas fa-angle-right text-color-primary"></i><strong
+												class="ms-2 font-weight-semibold">Lorem ipsum dolor sit amet.</strong></p>
+										<p class="text-2 mb-0">12:55 AM Dec 19th</p>
+									</a>
+								</li>
+								<li class="mb-2 pb-1">
+									<a href="#">
+										<p class="text-3 text-color-light opacity-8 mb-0"><i
+												class="fas fa-angle-right text-color-primary"></i><strong
+												class="ms-2 font-weight-semibold">Ipsum dolor sit amet.</strong></p>
+										<p class="text-2 mb-0">12:55 AM Dec 19th</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="text-3 text-color-light opacity-8 mb-0"><i
+												class="fas fa-angle-right text-color-primary"></i><strong
+												class="ms-2 font-weight-semibold">Lorem ipsum dolor sit amet.</strong></p>
+										<p class="text-2 mb-0">12:55 AM Dec 19th</p>
+									</a>
+								</li>
+							</ul>
+						</div> -->
+						<div class="col-md-6 col-lg-6 mb-4 mb-md-0">
+							<div class="contact-details">
+								<h5 class="text-3 mb-3">Ulaşın</h5>
+								<ul class="list list-icons list-icons-lg">
+									<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
+										<p class="m-0">Akdeniz Üniversitesi Teknokent AR-GE 3 Binası No:758/1 Antalya/Türkiye</p>
+									</li>
+									<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
+										<p class="m-0">Elmalı Mahallesi 8. Sokak Muratpaşa İşhanı No:2/102-103 Antalya/Türkiye</p>
+									</li>
+									<li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i>
+										<p class="m-0"><a href="tel:8001234567">0 850 777 0 111</a></p>
+									</li>
+									<li class="mb-1"><i class="far fa-envelope text-color-primary"></i>
+										<p class="m-0"><a href="mailto:mail@example.com">info@veboni.com</a></p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-2">
+							<h5 class="text-3 mb-3">Sosyal Medya</h5>
+							<ul class="social-icons">
+								<li class="social-icons-facebook"><a href="https://www.facebook.com/Vebonipos" target="_blank"
+										title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="social-icons-youtube"><a href="https://www.youtube.com/@veboni3164" target="_blank"
+										title="Youtube"><i class="fab fa-youtube"></i></a></li>
+								<li class="social-icons-linkedin"><a href="https://www.linkedin.com/company/veboni/" target="_blank"
+										title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="footer-copyright">
+					<div class="container py-2">
+						<div class="row py-4">
+							<div
+								class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+								<a href="index.html" class="logo pe-0 pe-lg-3">
+									<img alt="Porto Website Template" src="img/logo-footer.png" class="opacity-5" width="49"
+										height="22" data-plugin-options="{'appearEffect': 'fadeIn'}">
+								</a>
+							</div>
+							<div
+								class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+								<p>© Copyright 2023. All Rights Reserved.</p>
+							</div>
+							<div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+								<nav id="sub-menu">
+									<ul>
+										<li><i class="fas fa-angle-right"></i><a href="page-faq.html"
+												class="ms-1 text-decoration-none"> FAQ's</a></li>
+										<li><i class="fas fa-angle-right"></i><a href="sitemap.html"
+												class="ms-1 text-decoration-none"> Sitemap</a></li>
+										<li><i class="fas fa-angle-right"></i><a href="contact-us.html"
+												class="ms-1 text-decoration-none"> Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</footer>
+		</div>
+
+		<!-- Vendor -->
+		<script src="vendor/plugins/js/plugins.min.js"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="js/theme.js"></script>
+
+		<!-- Theme Custom -->
+		<script src="js/custom.js"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
+
+	</body>
+</html>
