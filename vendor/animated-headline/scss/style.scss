@@ -765,3 +765,16 @@ img[data-sticky-width="167"] {
 .custom-width {
 	width: 50% !important;
 }
+
+
+.document-management-dropdown {
+	width: 25% !important;
+	margin-left: 40% !important;
+}
+
+@media (max-width: 1375px) {
+	.document-management-dropdown {
+		width: 40% !important;
+		margin-left: 55% !important;
+	}
+}
