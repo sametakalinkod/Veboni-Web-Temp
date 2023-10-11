@@ -12022,3 +12022,9 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 		margin-left: 55% !important;
 	}
 }
+
+.ref-content {
+	padding: 5px 21px 5px !important;
+	bottom: 0% !important;
+	font-weight: 400 !important;
+}
