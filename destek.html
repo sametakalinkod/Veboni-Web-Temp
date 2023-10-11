@@ -106,7 +106,7 @@
                                                                 Medya ve Etkinlikler
                                                             </a>
                                                         </li>
-                                                         
+
                                                     </ul>
                                                 </li>
                                                 <li class="dropdown">
@@ -663,9 +663,9 @@
                                                                 href="https://www.kod.com.tr/">Sedna Cloud</a></li>
                                                         <li><a class="dropdown-item" target="_blank"
                                                                 href="https://www.asyasoft.com.tr/default.aspx">Asyasoft
-                                                                 Compass</a></li>
-														<li><a class="dropdown-item"
-																href="referances.html">Referanslarımız</a></li>
+                                                                Compass</a></li>
+                                                        <li><a class="dropdown-item"
+                                                                href="referances.html">Referanslarımız</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -732,62 +732,7 @@
 
                             <h2 class="font-weight-bold text-8 mt-2 mb-0">İletişime Geç</h2>
                             <p class="mb-4"></p>
-                            <script>
-
-                                function submitForm() {
-                                    const express = require('express');
-                                    const cors = require('cors');
-                                    const app = express();
-                                    const port = 5188; // Change to your desired port
-
-                                    // Configure CORS to allow requests from your client-side origin
-                                    app.use(cors({
-                                        origin: 'http://127.0.0.1:5500', // Update with your client-side origin
-                                        methods: 'GET,POST,PUT,DELETE',
-                                        credentials: true
-                                    }));
-
-                                    // Add your API endpoints and other server configuration here
-
-                                    app.listen(port, () => {
-                                        console.log(`Server is running on port ${port}`);
-                                    });
-                                    const url = 'http://localhost:5188/api/Mail/SendFormToMail/SendFormToMail';
-                                    const data = {
-                                        ToEmail: 'samet.akalin@kod.com.tr',
-                                        Subject: 'test',
-                                        Body: 'test'
-                                    };
-
-                                    // Convert the data to a JSON string
-                                    const jsonData = JSON.stringify(data);
-
-                                    // Create a new XMLHttpRequest object
-                                    const xhr = new XMLHttpRequest();
-
-                                    // Configure the request
-                                    xhr.open('POST', url, true);
-                                    xhr.setRequestHeader('Content-Type', 'application/json');
-
-                                    // Define a callback function to handle the response
-                                    xhr.onreadystatechange = function () {
-                                        if (xhr.readyState === 4) {
-                                            if (xhr.status === 200) {
-                                                // Request was successful, handle the response here
-                                                console.log('Request successful');
-                                                console.log(xhr.responseText);
-                                            } else {
-                                                // Request failed, handle the error here
-                                                console.error('Request failed');
-                                            }
-                                        }
-                                    };
-
-                                    // Send the POST request with the JSON data
-                                    xhr.send(jsonData);
-                                }
-                            </script>
-                            <form class="contact-form" method="post" onsubmit="submitForm(); return false;">
+                            <form id="contactForm" class="contact-form">
                                 <!-- <form action="mailto:contact@yourdomain.com" method="POST" class="contact-form"
                                 enctype="multipart/form-data" name="EmailForm"> -->
                                 <div class="contact-form-success alert alert-success d-none mt-4">
@@ -834,10 +779,48 @@
                                     <div class="form-group col">
                                         <input type="submit" value="Mesajı Gönder" class="btn btn-primary btn-modern"
                                             data-loading-text="Loading...">
+
                                     </div>
                                 </div>
                             </form>
+                            <script>
+                                document.getElementById("contactForm").addEventListener("submit", function (event) {
+                                    event.preventDefault();
+                                    debugger
+                                    const formData = new FormData(event.target);
 
+                                    const jsonData = {
+                                        "ToEmail": "samet.akalin@kod.com.tr",
+                                        "Subject": "test",
+                                        "Body": "test"
+                                    };
+
+                                    var data = JSON.stringify(jsonData)
+                                    fetch("http://localhost:5188/api/Mail/SendFormToMail/SendFormToMail", {
+                                        method: "POST",
+                                        body: data,
+                                        mode: "no-cors"
+                                    })
+
+                                        .then(response => {
+                                            if (response.ok) {
+                                                return response.json();
+                                            } else {
+                                                throw new Error("Form submission failed");
+                                            }
+                                        })
+                                        .then(data => {
+                                            const successMessage = document.querySelector(".contact-form-success");
+                                            successMessage.classList.remove("d-none");
+                                            successMessage.textContent = "Başarılı! Mesajınız başarılı bir şekilde bize ulaştı.";
+                                        })
+                                        .catch(error => {
+                                            const errorMessage = document.querySelector(".contact-form-error");
+                                            errorMessage.classList.remove("d-none");
+                                            errorMessage.textContent = `Hata! Mesajınızı gönderirken bir hata meydana geldi: ${error.message}`;
+                                        });
+                                });
+                            </script>
                         </div>
                         <div class="col-lg-6">
 
@@ -970,11 +953,11 @@
 
             /*
             Map Settings
-
+        
                 Find the Latitude and Longitude of your address:
                     - https://www.latlong.net/
                     - http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-
+        
             */
             function initializeGoogleMaps() {
                 // Map Markers
