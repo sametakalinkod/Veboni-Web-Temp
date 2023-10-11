@@ -31,7 +31,7 @@
 //     }
 // }
 if($_POST["message"]) {
-    mail("your@email.address", "Form to email message", $_POST["message"], "From: an@email.address");
+    mail("samet.akalin@kod.com.tr", "Form to email message", $_POST["message"], "From: samet.akalin@kod.com.tr");
 }
 
 ?>
