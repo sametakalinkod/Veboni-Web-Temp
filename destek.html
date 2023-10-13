@@ -784,9 +784,9 @@
                                 </div>
                             </form>
                             <script>
-                                <!-- document.getElementById("contactForm").addEventListener("submit", function (event) {
+                                document.getElementById("contactForm").addEventListener("submit", function (event) {
                                     event.preventDefault();
-                                    debugger
+
                                     const formData = new FormData(event.target);
 
                                     const jsonData = {
@@ -796,10 +796,14 @@
                                     };
 
                                     var data = JSON.stringify(jsonData)
-                                    fetch("http://localhost:5188/api/Mail/SendFormToMail/SendFormToMail", {
+                                    fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", {
                                         method: "POST",
                                         body: data,
-                                        mode: "no-cors"
+                                        mode: "no-cors",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        }
+
                                     })
 
                                         .then(response => {
@@ -819,25 +823,8 @@
                                             errorMessage.classList.remove("d-none");
                                             errorMessage.textContent = `Hata! Mesajınızı gönderirken bir hata meydana geldi: ${error.message}`;
                                         });
-                                }); -->
-                                $(document).getElementById("contactForm").addEventListener("submit", function () {
-                                    var ProductDetails = new Object();
-                                    ProductDetails.ProductName = $("#txt_productName").val();
-                                    ProductDetails.ProductDetail = $("#txt_desc").val();
-                                    ProductDetails.Price = $("#txt_price").val();
-                                    $.ajax({
-                                        url: "http://localhost:5188/api/Mail/SendFormToMail/SendFormToMail",
-                                        type: "Post",
-                                        dataType: 'JSON',
-                                        data: ProductDetails,
-
-                                        success: function (data) {
-                                            alert('Updated Successfully');
-                                            //window.location.href = "../Index";
-                                        },
-                                        error: function (msg) { alert(msg); }
-                                    });
                                 });
+
                             </script>
                         </div>
                         <div class="col-lg-6">
