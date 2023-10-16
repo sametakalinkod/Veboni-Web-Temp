@@ -127,7 +127,25 @@
                                                         <li><a class="dropdown-item" href="call-center.html">Çağrı
                                                                 Merkezi</a>
                                                         </li>
-                                                        <li><a class="dropdown-item" href="crm.html">CRM</a>
+                                                        <li class="dropdown-submenu">
+                                                            <a class="dropdown-item" href="#">CRM</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="crm-loyality.html">Loyalty (Sadakat)
+                                                                        Yönetimi</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="crm-survey.html">Anket Yönetimi
+                                                                    </a></li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="crm-mailing.html">Mailing</a></li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="crm-activities.html">Aktivite
+                                                                        Rezervasyonları </a></li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="crm-mobile.html">Mobil
+                                                                        uygulamalar </a></li>
+                                                            </ul>
                                                         </li>
                                                         <li><a class="dropdown-item"
                                                                 href="operation-tracking.html">Operasyon
@@ -786,42 +804,26 @@
                             <script>
                                 document.getElementById("contactForm").addEventListener("submit", function (event) {
                                     event.preventDefault();
-                                    const jsonData = JSON.stringify({
-                                        "ToEmail": "samet.akalin@kod.com.tr",
-                                        "Subject": "test",
-                                        "Body": "test"
-                                    });
                                     var myHeaders = new Headers();
                                     myHeaders.append("Content-Type", "application/json");
-                                    const formData = new FormData(event.target);
+                                    
+                                    var raw = JSON.stringify({
+                                      "ToEmail": "samet.akalin@kod.com.tr",
+                                      "Subject": "test",
+                                      "Body": "test deneme 12"
+                                    });
+                                    
                                     var requestOptions = {
-                                        method: 'POST',
-                                        headers: myHeaders,
-                                        body: jsonData,
-                                        redirect: 'follow'
-                                      };
-                                
-
-                                    var data = JSON.stringify(jsonData)
-                                    fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
-
-                                        .then(response => {
-                                            if (response.ok) {
-                                                return response.json();
-                                            } else {
-                                                throw new Error("Form submission failed");
-                                            }
-                                        })
-                                        .then(data => {
-                                            const successMessage = document.querySelector(".contact-form-success");
-                                            successMessage.classList.remove("d-none");
-                                            successMessage.textContent = "Başarılı! Mesajınız başarılı bir şekilde bize ulaştı.";
-                                        })
-                                        .catch(error => {
-                                            const errorMessage = document.querySelector(".contact-form-error");
-                                            errorMessage.classList.remove("d-none");
-                                            errorMessage.textContent = `Hata! Mesajınızı gönderirken bir hata meydana geldi: ${error.message}`;
-                                        });
+                                      method: 'POST',
+                                      headers: myHeaders,
+                                      body: raw,
+                                      redirect: 'follow'
+                                    };
+                                    
+                                    fetch("http://localhost:5188/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
+                                      .then(response => response.text())
+                                      .then(result => console.log(result))
+                                      .catch(error => console.log('error', error));
                                 });
 
                             </script>
