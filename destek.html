@@ -804,14 +804,24 @@
                             <script>
                                 document.getElementById("contactForm").addEventListener("submit", function (event) {
                                     event.preventDefault();
+
+                                    var konuInput = document.querySelector('input[name="subject"]');
+                                    var mesajInput = document.querySelector('textarea[name="message"]');
+                                    var emailInput = document.querySelector('textarea[name="email"]');
+                                    var konuValue = konuInput.value;
+                                    var mesajValue = mesajInput.value;
+                                    var emailValue = emailInput.value;
+
                                     var myHeaders = new Headers();
                                     myHeaders.append("Content-Type", "application/json");
 
-                                    var raw = JSON.stringify({
-                                        "ToEmail": "samet.akalin@kod.com.tr",
-                                        "Subject": "test",
-                                        "Body": "test deneme 12"
-                                    });
+                                    var rawData = {
+                                        "ToEmail": emailValue,
+                                        "Subject": konuValue,
+                                        "Body": mesajValue
+                                    };
+
+                                    var raw = JSON.stringify(rawData);
 
                                     var requestOptions = {
                                         method: 'POST',
