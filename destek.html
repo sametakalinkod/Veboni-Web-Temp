@@ -795,19 +795,20 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col">
-                                        <input type="submit" value="Mesajı Gönder" class="btn btn-primary btn-modern"
-                                            data-loading-text="Loading...">
+                                        <input value="Mesajı Gönder" class="btn btn-primary btn-modern"
+                                            id="submitButton" data-loading-text="Loading...">
 
                                     </div>
                                 </div>
                             </form>
                             <script>
-                                document.getElementById("contactForm").addEventListener("submit", function (event) {
+                                document.getElementById("submitButton").addEventListener("click", function (event) {
                                     event.preventDefault();
+                                    debugger
 
                                     var konuInput = document.querySelector('input[name="subject"]');
                                     var mesajInput = document.querySelector('textarea[name="message"]');
-                                    var emailInput = document.querySelector('textarea[name="email"]');
+                                    var emailInput = document.querySelector('input[name="email"]');
                                     var konuValue = konuInput.value;
                                     var mesajValue = mesajInput.value;
                                     var emailValue = emailInput.value;
@@ -831,9 +832,25 @@
                                     };
 
                                     fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
-                                        .then(response => response.text())
-                                        .then(result => console.log(result))
-                                        .catch(error => console.log('error', error));
+                                        .then(response => {
+                                            if (response.status === 200) {
+                                                // Display success message
+                                                document.querySelector('.contact-form-success').classList.remove('d-none');
+                                                document.querySelector('.contact-form-error').classList.add('d-none');
+                                            } else {
+                                                // Display error message
+                                                document.querySelector('.contact-form-success').classList.add('d-none');
+                                                document.querySelector('.contact-form-error').classList.remove('d-none');
+                                                document.querySelector('.mail-error-message').textContent = 'An error occurred.';
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.log('error', error);
+                                            // Display error message
+                                            document.querySelector('.contact-form-success').classList.add('d-none');
+                                            document.querySelector('.contact-form-error').classList.remove('d-none');
+                                            document.querySelector('.mail-error-message').textContent = 'An error occurred.';
+                                        });
                                 });
 
                             </script>
