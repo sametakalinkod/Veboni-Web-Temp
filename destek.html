@@ -812,6 +812,11 @@
                                     <div class="g-recaptcha" id="rcaptcha"
                                         data-sitekey="6LdzyakoAAAAALgBpnbo1XQ0Aa3dxW-vknMDFguN"></div>
                                     <span id="captcha" style="color:red" /></span>
+
+                                    <div class="g-recaptcha" id="rcaptcha"
+                                        data-sitekey="6LeCtakoAAAAAMHPr1rHUKGcJ_RWugrM_CFjzkUC"></div>
+                                    <span id="captcha" style="color:red" /></span>
+
                                     <div class="form-group col">
                                         <input value="Mesajı Gönder" class="btn btn-primary btn-modern"
                                             id="submitButton" data-loading-text="Loading...">
@@ -823,7 +828,7 @@
                                     event.preventDefault();
                                     debugger
                                     grecaptcha.enterprise.ready(async () => {
-                                        const token = await grecaptcha.enterprise.execute('6LdzyakoAAAAABwYlFQLiCetUMHowEBDguvIWAU6', { action: 'LOGIN' });
+                                        const token = await grecaptcha.enterprise.execute('6LeCtakoAAAAAMHPr1rHUKGcJ_RWugrM_CFjzkUC', { action: 'LOGIN' });
 
 
 
