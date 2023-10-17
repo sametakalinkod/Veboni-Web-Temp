@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Veboni Destek</title>
-
     <meta name="keywords"
         content="pms, otel programı, otel yönetim sistemi, otel yazılımı, devremülk, devretatil, önbüro yazılım, kbs, turizm, Turizm ERP, Turizm Sektörü, Paydaşlar, Dijitalleşme, Ekosistem, Konaklama, İç pazar, İncoming, Tur Operatör, İk, B2b, B2c, Satış Kanalları, Reçete, Üretim" />
     <meta name="description" content="Veboni ERP - Intuitive Cloud ERP System">
@@ -49,6 +48,8 @@
 
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6LeCtakoAAAAAMHPr1rHUKGcJ_RWugrM_CFjzkUC"></script>
     <style>
         .onburoPMS {
             background-image: url(img/solutions/veboniMasa.png);
@@ -751,8 +752,6 @@
                             <h2 class="font-weight-bold text-8 mt-2 mb-0">İletişime Geç</h2>
                             <p class="mb-4"></p>
                             <form id="contactForm" class="contact-form">
-                                <!-- <form action="mailto:contact@yourdomain.com" method="POST" class="contact-form"
-                                enctype="multipart/form-data" name="EmailForm"> -->
                                 <div class="contact-form-success alert alert-success d-none mt-4">
                                     <strong>Başarılı!</strong> Mesajınız başarılı bir şekilde bize ulaştı.
                                 </div>
@@ -793,11 +792,29 @@
                                             required></textarea>
                                     </div>
                                 </div>
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                                <script>
+
+                                    function get_action(form) {
+                                        var v = grecaptcha.getResponse();
+                                        if (v.length == 0) {
+                                            document.getElementById('captcha').innerHTML = "You can't leave Captcha Code empty";
+                                            return false;
+                                        }
+                                        else {
+                                            document.getElementById('captcha').innerHTML = "Captcha completed";
+                                            return true;
+                                        }
+                                    }
+
+                                </script>
                                 <div class="row">
+                                    <div class="g-recaptcha" id="rcaptcha"
+                                        data-sitekey="6LdzyakoAAAAALgBpnbo1XQ0Aa3dxW-vknMDFguN"></div>
+                                    <span id="captcha" style="color:red" /></span>
                                     <div class="form-group col">
                                         <input value="Mesajı Gönder" class="btn btn-primary btn-modern"
                                             id="submitButton" data-loading-text="Loading...">
-
                                     </div>
                                 </div>
                             </form>
@@ -805,6 +822,73 @@
                                 document.getElementById("submitButton").addEventListener("click", function (event) {
                                     event.preventDefault();
                                     debugger
+                                    grecaptcha.enterprise.ready(async () => {
+                                        const token = await grecaptcha.enterprise.execute('6LdzyakoAAAAABwYlFQLiCetUMHowEBDguvIWAU6', { action: 'LOGIN' });
+
+
+
+
+                                        var konuInput = document.querySelector('input[name="subject"]');
+                                        var mesajInput = document.querySelector('textarea[name="message"]');
+                                        var emailInput = document.querySelector('input[name="email"]');
+                                        var konuValue = konuInput.value;
+                                        var mesajValue = mesajInput.value;
+                                        var emailValue = emailInput.value;
+
+                                        var myHeaders = new Headers();
+                                        myHeaders.append("Content-Type", "application/json");
+
+                                        var rawData = {
+                                            "ToEmail": emailValue,
+                                            "Subject": konuValue,
+                                            "Body": mesajValue
+                                        };
+
+                                        var raw = JSON.stringify(rawData);
+
+                                        var requestOptions = {
+                                            method: 'POST',
+                                            headers: myHeaders,
+                                            body: raw,
+                                            redirect: 'follow'
+                                        };
+
+                                        fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
+                                            .then(response => {
+                                                if (response.status === 200) {
+                                                    // Display success message
+                                                    document.querySelector('.contact-form-success').classList.remove('d-none');
+                                                    document.querySelector('.contact-form-error').classList.add('d-none');
+                                                } else {
+                                                    // Display error message
+                                                    document.querySelector('.contact-form-success').classList.add('d-none');
+                                                    document.querySelector('.contact-form-error').classList.remove('d-none');
+                                                    document.querySelector('.mail-error-message').textContent = 'An error occurred.';
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.log('error', error);
+                                                // Display error message
+                                                document.querySelector('.contact-form-success').classList.add('d-none');
+                                                document.querySelector('.contact-form-error').classList.remove('d-none');
+                                                document.querySelector('.mail-error-message').textContent = 'An error occurred.';
+                                            });
+                                    });
+
+                                });
+
+                            </script>
+                            <!-- <script>
+                                document.getElementById("submitButton").addEventListener("click", function (event) {
+                                    event.preventDefault();
+                                    debugger
+                                    var recaptchaResponse = grecaptcha.getResponse();
+
+                                    if (!recaptchaResponse) {
+                                        // Handle case where reCAPTCHA was not completed
+                                        alert("Please complete the reCAPTCHA.");
+                                        return;
+                                    }
 
                                     var konuInput = document.querySelector('input[name="subject"]');
                                     var mesajInput = document.querySelector('textarea[name="message"]');
@@ -852,8 +936,7 @@
                                             document.querySelector('.mail-error-message').textContent = 'An error occurred.';
                                         });
                                 });
-
-                            </script>
+                            </script> -->
                         </div>
                         <div class="col-lg-6">
 
