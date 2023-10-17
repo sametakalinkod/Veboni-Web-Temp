@@ -809,12 +809,12 @@
 
                                 </script>
                                 <div class="row">
-                                    <div class="g-recaptcha" id="rcaptcha"
+                                    <!-- <div class="g-recaptcha" id="rcaptcha"
                                         data-sitekey="6LdzyakoAAAAALgBpnbo1XQ0Aa3dxW-vknMDFguN"></div>
                                     <span id="captcha" style="color:red" /></span>
 
                                     <div class="g-recaptcha" id="rcaptcha"
-                                        data-sitekey="6LeCtakoAAAAAMHPr1rHUKGcJ_RWugrM_CFjzkUC"></div>
+                                        data-sitekey="6LeCtakoAAAAAMHPr1rHUKGcJ_RWugrM_CFjzkUC"></div> -->
                                     <span id="captcha" style="color:red" /></span>
 
                                     <div class="form-group col">
@@ -823,7 +823,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <script>
+                            <!-- <script>
                                 document.getElementById("submitButton").addEventListener("click", function (event) {
                                     event.preventDefault();
                                     debugger
@@ -882,18 +882,10 @@
 
                                 });
 
-                            </script>
-                            <!-- <script>
+                            </script> -->
+                            <script>
                                 document.getElementById("submitButton").addEventListener("click", function (event) {
                                     event.preventDefault();
-                                    debugger
-                                    var recaptchaResponse = grecaptcha.getResponse();
-
-                                    if (!recaptchaResponse) {
-                                        // Handle case where reCAPTCHA was not completed
-                                        alert("Please complete the reCAPTCHA.");
-                                        return;
-                                    }
 
                                     var konuInput = document.querySelector('input[name="subject"]');
                                     var mesajInput = document.querySelector('textarea[name="message"]');
@@ -941,7 +933,7 @@
                                             document.querySelector('.mail-error-message').textContent = 'An error occurred.';
                                         });
                                 });
-                            </script> -->
+                            </script>
                         </div>
                         <div class="col-lg-6">
 
@@ -986,7 +978,7 @@
                     <div class="footer-ribbon">
                         <span>Daha fazla bilgi</span>
                     </div>
-                    <div class="row py-5 my-4">
+                    <div class="row py-5 mt-4">
                         <div class="col-md-6 col-lg-6 mb-4 mb-lg-0">
                             <h5 class="text-3 mb-3">HABER BÜLTENİ</h5>
                             <p class="pe-1">Sürekli gelişen ürün özelliklerimizden ve teknolojimizden haberdar olun.
