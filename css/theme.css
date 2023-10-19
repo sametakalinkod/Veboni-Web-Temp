@@ -12028,3 +12028,30 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 	bottom: 0% !important;
 	font-weight: 400 !important;
 }
+
+#footer {
+	margin-top: 0px !important;
+}
+
+@media (max-width: 451px) {
+	.header-transparent .header-nav-main nav {
+		padding: 0 0 0 0 !important;
+	}
+
+	.header-transparent .header-nav-main:before {
+		width: calc(100%) !important;
+	}
+
+	.header-nav-main nav>ul li a {
+		font-size: 15px !important;
+	}
+
+	.text-4-5 {
+		font-size: 1.65em !important;
+	}
+
+	p {
+		font-size: 15px !important;
+		line-height: 30px !important;
+	}
+}
