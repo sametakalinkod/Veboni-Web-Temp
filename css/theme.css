@@ -12054,4 +12054,8 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 		font-size: 15px !important;
 		line-height: 30px !important;
 	}
+
+	.isotope-item {
+		width: 50% !important;
+	}
 }
