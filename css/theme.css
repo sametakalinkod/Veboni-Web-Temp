@@ -12059,3 +12059,15 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 		width: 50% !important;
 	}
 }
+
+.post-image {
+	text-align: center !important;
+}
+
+.post-image a {
+	display: inline-block !important;
+}
+
+.post-image img {
+	vertical-align: middle !important;
+}
