@@ -576,28 +576,28 @@
                                                                 href="https://www.asyasoft.com.tr/default.aspx">Asyasoft
                                                                 Compass</a></li>
                                                         <li><a class="dropdown-item"
-																href="referances.html">Referanslarımız</a></li>
-													</ul>
-												</li>
-												<li><a class="dropdown-item display-onmob" href="destek.html">Destek</a>
-												</li>
-												<li><a class="dropdown-item display-onmob"
-														href="https://www.youtube.com/@veboni3164">Dokümantasyon</a>
-												</li>
+                                                                href="referances.html">Referanslarımız</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="dropdown-item display-onmob" href="destek.html">Destek</a>
+                                                </li>
+                                                <li><a class="dropdown-item display-onmob"
+                                                        href="https://www.youtube.com/@veboni3164">Dokümantasyon</a>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
                                 </div>
                                 <div class="header-links d-flex align-items-center display-onmob">
-									<a class="btn btn-primary ml-xl-3 mr-xl-1"
-										href="https://www.youtube.com/@veboni3164" rel="noopener" target="_blank">
-										Veboni Giriş
-									</a>
-								</div>
-								<div class="d-flex">
-									<div class="d-none d-xxl-flex custom-header-1-extra-links">
-										<ul class="nav me-3 mt-1 ">
-											<li class="nav-item">
+                                    <a class="btn btn-primary ml-xl-3 mr-xl-1"
+                                        href="https://www.youtube.com/@veboni3164" rel="noopener" target="_blank">
+                                        Veboni Giriş
+                                    </a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-none d-xxl-flex custom-header-1-extra-links">
+                                        <ul class="nav me-3 mt-1 ">
+                                            <li class="nav-item">
                                                 <a class="nav-link text-color-light text-2 font-weight-semibold"
                                                     href="destek.html">Destek</a>
                                             </li>
@@ -797,7 +797,7 @@
                                 });
 
                             </script> -->
-                            <script>
+                            <!-- <script>
                                 document.getElementById("submitButton").addEventListener("click", function (event) {
                                     event.preventDefault();
 
@@ -846,6 +846,40 @@
                                             document.querySelector('.contact-form-error').classList.remove('d-none');
                                             document.querySelector('.mail-error-message').textContent = 'An error occurred.';
                                         });
+                                });
+                            </script> -->
+                            <script>
+                                document.getElementById("submitButton").addEventListener("click", function (event) {
+                                    event.preventDefault();
+
+                                    const express = require('express');
+                                    const fetch = require('node-fetch');
+                                    const app = express();
+                                    const port = 5188; // Match the port of your API
+
+                                    app.use(express.json());
+
+                                    app.post('/api/Mail/SendFormToMail/SendFormToMail', async (req, res) => {
+                                        const requestOptions = {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                            },
+                                            body: JSON.stringify(req.body),
+                                        };
+
+                                        try {
+                                            const response = await fetch('http://localhost:5188/api/Mail/SendFormToMail/SendFormToMail', requestOptions);
+                                            const data = await response.json();
+                                            res.json(data);
+                                        } catch (error) {
+                                            res.status(500).json({ error: 'An error occurred.' });
+                                        }
+                                    });
+
+                                    app.listen(port, () => {
+                                        console.log(`Proxy server is running on port ${port}`);
+                                    });
                                 });
                             </script>
                         </div>
