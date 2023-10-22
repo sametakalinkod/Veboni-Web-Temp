@@ -12114,3 +12114,14 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 		font-size: 40px;
 	}
 }
+
+.display-onmob {
+	display: none !important;
+}
+
+/* for mobile */
+@media screen and (max-width: 990px) {
+	.display-onmob {
+		display: contents !important;
+	}
+}
