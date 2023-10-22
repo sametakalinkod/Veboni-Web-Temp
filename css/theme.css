@@ -12125,3 +12125,7 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 		display: contents !important;
 	}
 }
+
+.line-height-none {
+	height: 100px !important;
+}
