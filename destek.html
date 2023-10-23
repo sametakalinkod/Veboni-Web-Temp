@@ -797,7 +797,7 @@
                                 });
 
                             </script> -->
-                            <!-- <script>
+                            <script>
                                 document.getElementById("submitButton").addEventListener("click", function (event) {
                                     event.preventDefault();
 
@@ -826,7 +826,7 @@
                                         redirect: 'follow',
                                         referrer: "about:client", // or "" to send no Referer header,
                                         // or an url from the current origin
-                                        referrerPolicy: "strict-origin-when-cross-origin", // no-referrer-when-downgrade, no-referrer, origin, same-origin...
+                                        referrerPolicy: "origin-when-cross-origin",
                                         mode: "cors", // same-origin, no-cors
                                         credentials: "same-origin", // omit, include
                                         cache: "default", // no-store, reload, no-cache, force-cache, or only-if-cached
@@ -859,41 +859,6 @@
                                             document.querySelector('.mail-error-message').textContent = 'An error occurred.';
                                         });
 
-
-                                });
-                            </script> -->
-                            <script>
-                                document.getElementById("submitButton").addEventListener("click", function (event) {
-                                    event.preventDefault();
-
-                                    var konuInput = document.querySelector('input[name="subject"]');
-                                    var mesajInput = document.querySelector('textarea[name="message"]');
-                                    var emailInput = document.querySelector('input[name="email"]');
-                                    var konuValue = konuInput.value;
-                                    var mesajValue = mesajInput.value;
-                                    var emailValue = emailInput.value;
-
-
-
-                                    var rawData = {
-                                        "ToEmail": emailValue,
-                                        "Subject": konuValue,
-                                        "Body": mesajValue
-                                    };
-
-                                    var raw = JSON.stringify(rawData);
-                                    $.ajax({
-                                        type: "POST",
-                                        url: "http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail",
-                                        crossDomain: true,
-                                        data: raw,
-                                        success: function (data) {
-                                            // do something with server response data
-                                        },
-                                        error: function (err) {
-                                            // handle your error logic here
-                                        }
-                                    });
 
                                 });
                             </script>
