@@ -838,26 +838,35 @@
                                     };
 
 
-                                    fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
-                                        .then(response => {
-                                            if (response.status === 200) {
-                                                // Display success message
+                                    var url = "http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail";
+                                    var data = {
+                                        // Your request data here
+                                    };
+
+                                    var xhr = new XMLHttpRequest();
+                                    xhr.open("POST", url, true);
+
+                                    // Set the request headers if needed
+                                    xhr.setRequestHeader("Content-Type", "application/json");
+
+                                    xhr.onreadystatechange = function () {
+                                        if (xhr.readyState === 4) {
+                                            if (xhr.status === 200) {
+                                                // Success
                                                 document.querySelector('.contact-form-success').classList.remove('d-none');
                                                 document.querySelector('.contact-form-error').classList.add('d-none');
                                             } else {
-                                                // Display error message
+                                                // Error
                                                 document.querySelector('.contact-form-success').classList.add('d-none');
                                                 document.querySelector('.contact-form-error').classList.remove('d-none');
                                                 document.querySelector('.mail-error-message').textContent = 'An error occurred.';
                                             }
-                                        })
-                                        .catch(error => {
-                                            console.log('error', error);
-                                            // Display error message
-                                            document.querySelector('.contact-form-success').classList.add('d-none');
-                                            document.querySelector('.contact-form-error').classList.remove('d-none');
-                                            document.querySelector('.mail-error-message').textContent = 'An error occurred.';
-                                        });
+                                        }
+                                    };
+
+                                    // Convert data to JSON and send the request
+                                    xhr.send(JSON.stringify(data));
+
 
 
                                 });
