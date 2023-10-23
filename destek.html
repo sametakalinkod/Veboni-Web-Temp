@@ -826,7 +826,7 @@
                                         redirect: 'follow'
                                     };
 
-                                    fetch("http://localhost:5188/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
+                                    fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
                                         .then(response => {
                                             if (response.status === 200) {
                                                 // Display success message
