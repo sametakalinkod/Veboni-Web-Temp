@@ -12119,6 +12119,10 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 	display: none !important;
 }
 
+.display-onmob-li {
+	padding: 7px 8px !important
+}
+
 /* for mobile */
 @media screen and (max-width: 990px) {
 	.display-onmob {
@@ -12128,4 +12132,11 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 
 .line-height-none {
 	height: 100px !important;
+}
+
+
+@media (max-width: 991px) {
+	#header .header-nav-main nav>ul {
+		padding-bottom: 0px !important;
+	}
 }
