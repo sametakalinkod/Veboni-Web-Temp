@@ -823,7 +823,8 @@
                                         method: 'POST',
                                         headers: myHeaders,
                                         body: raw,
-                                        redirect: 'follow'
+                                        redirect: 'follow',
+                                        referrerPolicy: "unsafe_url"
                                     };
 
                                     fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
