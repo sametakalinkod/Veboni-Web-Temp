@@ -44,18 +44,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Deploy HTML Page
-        run: |
-          # Copy your HTML file to the root directory
-          cp index.html $GITHUB_WORKSPACE/index.html
-
-          # Commit and push the changes to deploy the page
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add index.html
-          git commit -m "Deploy HTML page"
-          git push
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
