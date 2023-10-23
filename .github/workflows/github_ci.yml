@@ -29,36 +29,35 @@
 #     - run: npm i
 #     - run: npm run build --if-present
 
- 
-name: Static HTML Page
- 
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
- 
+
 jobs:
-  build:
-    runs-on: self-hosted
- 
+  deploy:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
- 
+
       - name: Deploy HTML Page
         run: |
-          # You can copy your HTML file to a web server directory here.
-          # For example, if you want to deploy to GitHub Pages, you can use the following command:
-          cp path/to/your/html/index.html $GITHUB_WORKSPACE
- 
-          # Commit and push the changes to deploy the page.
+          # Copy your HTML file to the root directory
+          cp path/to/your/html/index.html index.html
+
+          # Commit and push the changes to deploy the page
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add .
           git commit -m "Deploy HTML page"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
