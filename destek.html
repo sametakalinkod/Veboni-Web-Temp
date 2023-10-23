@@ -19,7 +19,7 @@
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <!-- Web Fonts  -->
     <link id="googleFonts"
         href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap"
@@ -827,6 +827,7 @@
                                         referrerPolicy: 'no-referrer'
                                     };
 
+
                                     fetch("http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail", requestOptions)
                                         .then(response => {
                                             if (response.status === 200) {
@@ -847,6 +848,8 @@
                                             document.querySelector('.contact-form-error').classList.remove('d-none');
                                             document.querySelector('.mail-error-message').textContent = 'An error occurred.';
                                         });
+
+
                                 });
                             </script>
                         </div>
