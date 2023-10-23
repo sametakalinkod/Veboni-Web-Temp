@@ -47,7 +47,7 @@ jobs:
       - name: Deploy HTML Page
         run: |
           # Copy your HTML file to the root directory
-          cp path/to/your/html/index.html index.html
+          cp index.html $GITHUB_WORKSPACE/index.html
 
           # Commit and push the changes to deploy the page
           git config user.name "GitHub Actions"
