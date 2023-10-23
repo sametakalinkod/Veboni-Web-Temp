@@ -839,9 +839,6 @@
 
 
                                     var url = "http://mailing.veboni.com/sendmail/api/Mail/SendFormToMail/SendFormToMail";
-                                    var data = {
-                                        // Your request data here
-                                    };
 
                                     var xhr = new XMLHttpRequest();
                                     xhr.open("POST", url, true);
@@ -865,7 +862,7 @@
                                     };
 
                                     // Convert data to JSON and send the request
-                                    xhr.send(JSON.stringify(data));
+                                    xhr.send(JSON.stringify(rawData));
 
 
 
