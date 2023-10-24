@@ -44,24 +44,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./
-
-
-      - name: Download Latest Files 
+      - name: Build and Deploy to GitHub Pages
         run: |
-          # Use wget, curl, or any other tool to download the latest files as needed
-          wget https://example.com/latest-files.zip
-          unzip latest-files.zip -d ./path/to/extract
+          # Build your project (replace with the build command for your project)
+          npm install
+          npm run build
 
-      - name: Install a Simple Web Server
-        run: |
-          npm install -g http-server
-          
-      - name: Serve the HTML Project
-        run: |
-          # Use a simple web server to serve the HTML project
-          http-server ./
+          # Deploy to GitHub Pages
+          npx gh-pages -d dist  # You may need to adjust the path to your build output
+
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
