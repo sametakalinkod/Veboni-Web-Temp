@@ -47,13 +47,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./
-
-      - name: Serve HTML Project
-        run: |
-          # Use a simple web server to serve the HTML project
-          python -m http.server 8080  # You can use Python's built-in HTTP server
-
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
