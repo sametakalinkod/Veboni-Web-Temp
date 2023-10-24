@@ -48,8 +48,7 @@
 
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
-    <script
-        src="https://www.google.com/recaptcha/enterprise.js?render=6LeCtakoAAAAAMHPr1rHUKGcJ_RWugrM_CFjzkUC"></script>
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <style>
         .onburoPMS {
             background-image: url(img/solutions/veboniMasa.png);
@@ -670,7 +669,7 @@
                         <div class="col-lg-4">
                             <h2 class="font-weight-bold text-8 mt-2 mb-0">İletişime Geç</h2>
                             <p class="mb-4"></p>
-                            <form id="contactForm" class="contact-form">
+                            <form action="contact-form.php" method="post" id="myForm">
                                 <div class="contact-form-success alert alert-success d-none mt-4">
                                     <strong>Başarılı!</strong> Mesajınız başarılı bir şekilde bize ulaştı.
                                 </div>
@@ -711,7 +710,9 @@
                                             name="message" required></textarea>
                                     </div>
                                 </div>
-                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                                <button class="g-recaptcha" data-sitekey="6LdzyakoAAAAALgBpnbo1XQ0Aa3dxW-vknMDFguN"
+                                    data-callback="onSubmit">Submit</button>
+
                                 <script>
 
                                     function get_action(form) {
@@ -742,6 +743,28 @@
                                     </div>
                                 </div>
                             </form>
+                            <script>
+                                document.querySelector('form').addEventListener('submit', function (e) {
+                                    e.preventDefault(); // Prevent the form from submitting normally
+
+                                    // Use JavaScript to send a POST request to the PHP script
+                                    var formData = new FormData(this);
+                                    fetch('contact-form.php', {
+                                        method: 'POST',
+                                        body: formData
+                                    })
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            if (data.success) {
+                                                alert(data.msg);
+                                                // Redirect or perform other actions as needed
+                                            } else {
+                                                alert(data.msg);
+                                                // Handle error, e.g., show an error message
+                                            }
+                                        });
+                                });
+                            </script>
                             <!-- <script>
                                 document.getElementById("submitButton").addEventListener("click", function (event) {
                                     event.preventDefault();

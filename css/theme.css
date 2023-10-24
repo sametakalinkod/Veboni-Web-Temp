@@ -12139,4 +12139,24 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 	#header .header-nav-main nav>ul {
 		padding-bottom: 0px !important;
 	}
+
+	#header .header-nav-main {
+		width: 100vw !important;
+		padding: 0px !important;
+	}
+
+	html #header.header-transparent .header-nav-main:before {
+		width: 100vw !important;
+	}
+
+	html #header.header-transparent .header-nav-main nav {
+		padding: 0px !important;
+	}
+}
+
+
+@media (max-width: 992px) {
+	.mob-img-temp {
+		width: 100% !important;
+	}
 }
