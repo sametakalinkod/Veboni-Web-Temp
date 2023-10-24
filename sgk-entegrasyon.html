@@ -707,64 +707,119 @@
             </div>
 
             <footer id="footer">
-                <div class="container">
-                    <!-- <div class="footer-ribbon">
-						<span>Daha fazla bilgi</span>
-					</div> -->
-                    <div class="row py-5 mt-4">
-                        <div class="col-md-6 col-lg-6 mb-4 mb-lg-0">
-                            <h5 class="text-3 mb-3">HABER BÜLTENİ</h5>
-                            <p class="pe-1">Sürekli gelişen ürün özelliklerimizden ve teknolojimizden haberdar olun.
-                                E-posta adresinizi girin ve bültenimize abone olun.</p>
-                            <div class="alert alert-success d-none" id="newsletterSuccess">
-                                <strong>Success!</strong> You've been added to our email list.
-                            </div>
-                            <div class="alert alert-danger d-none" id="newsletterError"></div>
-                            <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST"
-                                class="me-4 mb-3 mb-md-0">
-                                <div class="input-group input-group-rounded">
-                                    <input class="form-control form-control-sm bg-light" placeholder="Email Address"
-                                        name="newsletterEmail" id="newsletterEmail" type="email">
-                                    <button class="btn btn-light text-color-dark"
-                                        type="submit"><strong>GO!</strong></button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-6 col-lg-6 mb-4 mb-md-0">
-                            <div class="contact-details">
-                                <h5 class="text-3 mb-3">Ulaşın</h5>
-                                <ul class="list list-icons list-icons-lg">
-                                    <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
-                                        <p class="m-0">Akdeniz Üniversitesi Teknokent AR-GE 3 Binası No:758/1
-                                            Antalya/Türkiye</p>
-                                    </li>
-                                    <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
-                                        <p class="m-0">Elmalı Mahallesi 8. Sokak Muratpaşa İşhanı No:2/102-103
-                                            Antalya/Türkiye</p>
-                                    </li>
-                                    <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i>
-                                        <p class="m-0"><a href="tel:8001234567">0 850 777 0 111</a></p>
-                                    </li>
-                                    <li class="mb-1"><i class="far fa-envelope text-color-primary"></i>
-                                        <p class="m-0"><a href="mailto:mail@example.com">info@veboni.com</a></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-2">
-                            <h5 class="text-3 mb-3">Sosyal Medya</h5>
-                            <ul class="social-icons">
-                                <li class="social-icons-facebook"><a href="https://www.facebook.com/Vebonipos"
-                                        target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="social-icons-youtube"><a href="https://www.youtube.com/@veboni3164"
-                                        target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
-                                <li class="social-icons-linkedin"><a href="https://www.linkedin.com/company/veboni/"
-                                        target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+			<div class="container">
+				<!-- <div class="footer-ribbon">
+					<span>Daha fazla bilgi</span>
+				</div> -->
+				<div class="row pt-5 pb-4">
+					<div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+						<!-- <h5 class="text-3 mb-3">HABER BÜLTENİ</h5> -->
+						<a style="position: absolute; margin-top: -4em;"><img src="img/veboni.svg" width="100"
+								height="100" class="mb-3"></a>
+						<p style="margin-top:2rem;">Kod yazılım A.Ş. Otelcilik sektörünün lokomotif ürünleri olan
+							Sedna ve Asyasoft
+							markalarını bünyesinde barındırır. Bu markalar 700 ‘e yakın zincir, münferit otel
+							grubu ve acenteye 30 yıla yakındır hizmet vermektedir.
+						</p>
+					</div>
+					<div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<h5 class="text-3 mb-3">HABER BÜLTENİ</h5>
+						<p class="pe-1">Sürekli gelişen ürün özelliklerimizden ve teknolojimizden haberdar olun.
+							E-posta adresinizi girin ve bültenimize abone olun.</p>
+						<div class="alert alert-success d-none" id="newsletterSuccess">
+							<strong>Başarılı!</strong> Mail listemize abone oldunuz.
+						</div>
+						<div class="alert alert-danger d-none" id="newsletterError"></div>
+						<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST"
+							class="me-4 mb-3 mb-md-0">
+							<div class="input-group input-group-rounded">
+								<input class="form-control form-control-sm bg-light" placeholder="Email Adresi"
+									name="newsletterEmail" id="newsletterEmail" type="email">
+								<button class="btn btn-light text-color-dark" type="submit"><strong>>></strong></button>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+						<div class="contact-details">
+							<h5 class="text-3 mb-3">Ulaşın</h5>
+							<ul class="list list-icons list-icons-lg col-12">
+								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
+									<p class="m-0">Akdeniz Üniversitesi Teknokent AR-GE 3 Binası No:758/1
+										Antalya/Türkiye</p>
+								</li>
+								<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i>
+									<p class="m-0">Elmalı Mahallesi 8. Sokak Muratpaşa İşhanı No:2/102-103
+										Antalya/Türkiye</p>
+								</li>
+								<li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i>
+									<p class="m-0"><a href="tel:8001234567">0 850 777 0 111</a></p>
+								</li>
+								<li class="mb-1"><i class="far fa-envelope text-color-primary"></i>
+									<p class="m-0"><a href="mailto:mail@example.com">info@veboni.com</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-12">
+						<h5 class="text-3 mb-3">Sosyal Medya</h5>
+						<ul class="social-icons">
+							<li class="social-icons-facebook"><a href="https://www.facebook.com/Vebonipos"
+									target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="social-icons-youtube"><a href="https://www.youtube.com/@veboni3164"
+									target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+							<li class="social-icons-linkedin"><a href="https://www.linkedin.com/company/veboni/"
+									target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+							<li class="social-icons-linkedin"><a
+									href="https://instagram.com/vebonierp?igshid=MzRlODBiNWFlZA==" target="_blank"
+									title="Instagram"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="whatsapp-icon-class">
+					<a href="https://api.whatsapp.com/send?phone=905301511150&text=Merhaba%20daha%20fazla%20bilgi%20alabilir%20miyim%3F"
+						target="_blank" class="whatsapp_float"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="footer-copyright footer-copyright-style-2 pt-4 pb-4">
+					<div class="row">
+						<div class="col-12 text-center">
+							<p class="mb-0">Kod Yazılım ©. All Rights Reserved</p>
+							<!-- <p class="mb-0">KVKK Metni</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="footer-copyright">
+					<div class="container py-2">
+						<div class="row py-4">
+							<div
+								class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+								<a href="index.html" class="logo pe-0 pe-lg-3">
+									<img alt="Porto Website Template" src="img/logo-footer.png" class="opacity-5" width="49"
+										height="22" data-plugin-options="{'appearEffect': 'fadeIn'}">
+								</a>
+							</div>
+							<div
+								class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+								<p>© Copyright 2023. All Rights Reserved.</p>
+							</div>
+							<div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+								<nav id="sub-menu">
+									<ul>
+										<li><i class="fas fa-angle-right"></i><a href="page-faq.html"
+												class="ms-1 text-decoration-none"> FAQ's</a></li>
+										<li><i class="fas fa-angle-right"></i><a href="sitemap.html"
+												class="ms-1 text-decoration-none"> Sitemap</a></li>
+										<li><i class="fas fa-angle-right"></i><a href="contact-us.html"
+												class="ms-1 text-decoration-none"> Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div> -->
+		</footer>
         </div>
 
         <!-- Vendor -->
