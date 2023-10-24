@@ -44,14 +44,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and Deploy to GitHub Pages
-        run: |
-          # Build your project (replace with the build command for your project)
-          npm install
-          npm run build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./
 
-          # Deploy to GitHub Pages
-          npx gh-pages -d dist  # You may need to adjust the path to your build output
+      - name: Serve HTML Project
+        run: |
+          # Use a simple web server to serve the HTML project
+          python -m http.server 8080  # You can use Python's built-in HTTP server
 
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
