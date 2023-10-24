@@ -1,37 +1,50 @@
+
 <?php
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $name = $_POST["name"];
-//     $email = $_POST["email"];
-//     $subject = $_POST["subject"];
-//     $message = $_POST["message"];
+/*
+ * captcha with phpmaster account
+*/
 
+if($_SERVER['REQUEST_METHOD']=="POST"){
 
-//     // Set the recipient's email address
-//     $to = "samet.akalin@kod.com.tr"; // Replace with the actual email address.
+    if(isset($_POST['g-recaptcha-response'])){
+        $token = $_POST['g-recaptcha-response'];
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = array(
+            'secret' => '6LdzyakoAAAAABwYlFQLiCetUMHowEBDguvIWAU6',
+            'response' => $token
+        );
 
-//     // Email headers
-//     $headers = "From: $email\r\n";
-//     $headers .= "Reply-To: $email\r\n";
-//     $headers .= "MIME-Version: 1.0\r\n";
-//     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+        $options = array(
+            'http' => array (
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            )
+        );
 
-//     // Compose the email message
-//     $email_message = "Name: $name<br>";
-//     $email_message .= "Email: $email<br>";
-//     $email_message .= "Subject: $subject<br><br>";
-//     $email_message .= "Message:<br>$message";
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        $response = json_decode($result);
 
-//     // Send the email
-//     if (mail($to, $subject, $email_message, $headers)) {
-//         // Email sent successfully
-//         echo "success"; // You can customize this response as needed.
-//     } else {
-//         // Email sending failed
-//         echo "error"; // You can customize this response as needed.
-//     }
-// }
-if($_POST["message"]) {
-    mail("samet.akalin@kod.com.tr", "Form to email message", $_POST["message"], "From: samet.akalin@kod.com.tr");
+        /*
+        - google response score is between 0.0 to 1.0
+        - if score is 0.5, it's a human
+        - if score is 0.0, it's a bot
+        - google recommend to use score 0.5 for verify human
+        */
+        if ($response->success && $response->score >= 0.5) {
+            echo json_encode(array('success' => true, "msg"=>"You are not a robot!", "response"=>$response));
+        } else {
+            /*
+            * if score is less than 0.5, you can do following things
+            * login => 	With low scores, require 2-factor-authentication or email verification to prevent credential stuffing attacks.
+            * social =>     With low scores, require additional verification steps, such as a CAPTCHA or email verification.
+            *              - Limit unanswered friend requests from abusive users and send risky comments to moderation.
+            * e-commerce => Put your real sales ahead of bots and identify risky transactions.
+            * */
+            echo json_encode(array('success' => false, "msg"=>"You are a robot!", "response"=>$response));
+        }
+    }
 }
 
 ?>
