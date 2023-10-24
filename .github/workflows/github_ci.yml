@@ -49,3 +49,19 @@ jobs:
         with:
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./
+
+
+      - name: Download Latest Files 
+        run: |
+          # Use wget, curl, or any other tool to download the latest files as needed
+          wget https://example.com/latest-files.zip
+          unzip latest-files.zip -d ./path/to/extract
+
+      - name: Install a Simple Web Server
+        run: |
+          npm install -g http-server
+          
+      - name: Serve the HTML Project
+        run: |
+          # Use a simple web server to serve the HTML project
+          http-server ./
